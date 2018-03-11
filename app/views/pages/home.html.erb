@@ -1,0 +1,34 @@
+<style>
+	body {padding-top: 20vh;}
+	* {
+		font-family: Comic Sans MS;
+		color: red;
+		font-style: oblique;
+		text-align: center;
+		margin: auto;
+	}
+</style>
+
+<h1>Users</h1>
+<% @users.each do |u| %>
+	<b>Name:</b><%= u.username %>
+	<b>Email:</b><%= u.email %>
+	<b>Age:</b><%= u.age %>
+	<br><br>
+<% end %>
+
+<h1>Cats</h1>
+<% @cats.each do |c| %>
+	<b>Name:</b><%= c.name %>
+	<br><br>
+<% end %>
+
+<h1>Todos</h1>
+<% @todos.each do |t| %>
+	<b>Task:</b><%= t.task %>
+	<b>Done:</b><%= t.done %>
+	<br><br>
+<% end %>
+
+<br>
+<%= link_to 'new todo', todos_new_path %>
